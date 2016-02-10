@@ -1,0 +1,26 @@
+{
+  "name": "ntalk",
+  "description": "Node Talk - Agenda de contatos",
+  "main": "",
+  "authors": [
+    "Edgard <edgard-rodrigo@hotmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "node"
+  ],
+  "moduleType": [
+    "node"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6"
+  }
+}

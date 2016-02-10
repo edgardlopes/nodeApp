@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>NTalk - Agenda de contatos</title>
+		<link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css">
+		<link rel="stylesheet" href="stylesheets/sticky-footer.css">
+
+	</head>
+	<body>
+
+		<header>
+			<h2>NTalk - Agenda de contatos <span class="pull-right"><%include ../exit%></span></h2>
+		</header>
+		<section class="container">
+			<form action="/contato" method="post">
+				<input type="text" name="contato[nome]" class="form-control" placeholder="Nome">
+				<br>
+				<input type="text" name="contato[email]" class="form-control" placeholder="email">
+				<br>
+				<button type="submit" class="btn btn-success">Cadastrar</button>
+			</form>
+
+			<div class="table-responsive">
+				<table class="table table-striped">
+					<thead>
+						<th>Nome</th>
+						<th>Email</th>
+					</thead>
+					<tbody>
+						<%contatos.forEach(function(contato, index){%>
+						<tr>
+							<td><a href="/contato/<%-index%>"><%-contato.nome%></a></td>
+							<td><%-contato.email%></td>
+						</tr>
+						<%});%>						
+					</tbody>
+				</table>
+			</div>
+
+		</section>
+
+		<%include ../footer%>
+	</body>
+</html>
+
+

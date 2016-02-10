@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Editar Contato</title>
+        <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css">    
+        <link rel="stylesheet" href="stylesheets/sticky-footer.css">
+    </head>
+    <body>
+        <header>
+            <h2>Dados do contato Contato</h2>
+        </header>
+        <section>
+            <form action="/contato/<%-id%>" method="post">
+                <input type="hidden" name="_method" value="delete">
+                <p><label>Nome: </label><%-contato.nome%></p>
+                <p><label>Email: </label><%-contato.email%></p>
+                                   
+                                
+                <a href="/contato/<%-id%>/editar" class="btn btn-default">Editar</a>                                
+                <button type="submit" class="btn btn-danger">Excluir</button>
+                    
+            </form>
+        </section>
+        
+        <%include ../footer%>
+    </body>
+</html>
